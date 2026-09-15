@@ -1,4 +1,4 @@
-# Android TV con Waydroid en Ubuntu
+# 📺 Android TV con Waydroid en Ubuntu
 
 Instalación de una imagen **Android TV** dentro de Waydroid
 (contenedor Android en Linux) del equipo jose-Vostro-3405.
