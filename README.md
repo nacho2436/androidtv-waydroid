@@ -42,3 +42,9 @@ waydroid show-full-ui
   para comprobar que tus copias externas están intactas.
 
 Sesión de origen: "Instalar Waydroid con imagen Android TV en Ubuntu".
+
+## ☕ Donaciones
+
+Si este proyecto te sirve, apóyame en Ko-fi:
+
+[![Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/F1F81BZQDW)
