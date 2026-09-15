@@ -1,0 +1,11 @@
+# SHA-256 de las imágenes de Android TV (~6 GB, viven en ~/waydroid-atv)
+# NO se suben a git. Para verificar una copia externa:
+#   cd /carpeta/de/tu/copia && sha256sum -c imagenes-checksums.txt
+#
+ff9025e0f73e6784f57ef9d3dd5b90ce648d524dd4c20d8cfe5dc2b66ccc4ce4  system.img
+5c7aee74d827c278a7fad1add5ddfed7a353ec64a3f2075467fb0c74d059eb60  vendor.img
+ddf5995f9104fe7164ad326def8bbed5cbf6340b55da5012e240b5855c44953b  system.zip
+8b8b176c7d3b34719889f3c891d86b98af8dbbb2f737a970e89302fa3d0cf077  vendor.zip
+29b19a7dd1b4c52f6ff127d0011d0e3215a527becaac61ce38253500069afae7  system-a13.zip
+38a5b080451e8a87d6bfa6e5ec06c740d148df4717781845ec308ca3eb606f9b  vendor-a13.zip
+87ab9e155d52e528ee361eb62c53a8df7338a97b195217d1c3e7fdb22ce8ec2f  system-vanilla.zip
