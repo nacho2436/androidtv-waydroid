@@ -32,6 +32,27 @@ sudo waydroid init -f
 waydroid show-full-ui
 ```
 
+## 🔧 Falla conocida: Android TV no arranca (pantalla en negro)
+
+**Síntoma**: Waydroid abre la ventana pero Android nunca termina de
+arrancar. En `sudo waydroid shell "logcat -d -b crash"` todos los
+procesos (zygote, keystore2, keymaster…) mueren con
+`BORINGSSL_FIPS_abort` dentro de `rand_get_seed`.
+
+**Causa**: bug de AMD Ryzen — tras suspender/reanudar el equipo, la
+instrucción RDRAND del CPU queda atascada devolviendo siempre
+`0xFFFFFFFFFFFFFFFF`. El BoringSSL FIPS de Android lo detecta y aborta
+todos los procesos criptográficos, así que el sistema nunca bootea.
+El reinicio normal (warm reboot) NO lo repara.
+
+**Solución**:
+1. Verificar el estado: `./verificar-rdrand.sh`
+2. Si está roto: **apagado en frío** — apagar del todo, desconectar el
+   cargador y mantener pulsado el botón de encendido ~30 s; luego
+   encender y volver a verificar.
+3. Prevenir: actualizar el BIOS de Dell (la corrección oficial de AMD
+   viene vía AGESA en las actualizaciones de BIOS).
+
 ## Archivos de este respaldo
 
 - `config/waydroid.cfg` — configuración principal (ruta de imágenes,
